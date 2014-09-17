@@ -33,6 +33,9 @@ sidekiq.enqueue("WorkerClass", ["argument", "array"], {
 sidekiq.enqueue("WorkerClass", ["some", "args"], {
     at: new Date(2013, 11, 1)
 });
+
+//Unique Job Scheduling
+sidekiq.enqueue("WorkerClass", ["some", "args"], {}, true);
 ```
 
 
